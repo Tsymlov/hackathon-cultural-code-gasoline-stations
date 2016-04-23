@@ -15,7 +15,12 @@ class MainViewController: UIViewController {
     private let locationName = "Хлеб и Вино"
     private var currentPumpNumber = ""
     
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var mapView: MKMapView!{
+        didSet{
+            mapView.showsUserLocation = true
+            mapView.userTrackingMode = .FollowWithHeading
+        }
+    }
     
     private var navigineCore: NavigineCore!{
         didSet{
