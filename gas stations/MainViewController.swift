@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     private let userHash = "6FBE-A327-8081-B5A0"
     private let locationName = "Хлеб и Вино"
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: NavigineCoreDelegate{
+extension MainViewController: NavigineCoreDelegate{
     func didRangePushWithTitle(title: String!, content: String!, image: String!, id: Int) {
         guard let number = content else{
             return
