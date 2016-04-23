@@ -9,9 +9,22 @@
 import UIKit
 
 class ProgressViewController: UIViewController {
+    
+    var timer: NSTimer!
+    private let successSegueID = "Show Success"
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: #selector(elapseTimer), userInfo: nil, repeats: false)
+    }
+    
+    func elapseTimer(sender: NSTimer){
+        goToSuccessScreen()
+    }
+    
+    private func goToSuccessScreen(){
+        performSegueWithIdentifier(successSegueID, sender: self)
     }
     
     override func viewWillDisappear(animated: Bool) {

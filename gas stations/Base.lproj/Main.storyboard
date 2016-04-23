@@ -216,10 +216,68 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="1Ap-jX-81D" kind="show" identifier="Show Success" id="m1L-G8-NbA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uqn-zK-1HE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1766.5" y="221.5"/>
+        </scene>
+        <!--Success-->
+        <scene sceneID="bav-7l-Y9M">
+            <objects>
+                <viewController id="1Ap-jX-81D" userLabel="Success" customClass="ProgressViewController" customModule="gas_stations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="psd-4E-TE2"/>
+                        <viewControllerLayoutGuide type="bottom" id="l8W-hz-fw6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YpO-vD-NQj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Success Icon" translatesAutoresizingMaskIntoConstraints="NO" id="APg-td-bVF">
+                                <rect key="frame" x="16" y="162" width="343" height="343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="APg-td-bVF" secondAttribute="height" multiplier="1:1" id="JhY-nJ-RYT"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы заправлены!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd3-y0-3Y7">
+                                <rect key="frame" x="16" y="33" width="343" height="121"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alj-0i-jhf">
+                                <rect key="frame" x="140" y="606" width="94" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Закрыть">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchCancelButton" destination="1Ap-jX-81D" eventType="touchUpInside" id="J3I-oL-X4R"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dd3-y0-3Y7" firstAttribute="leading" secondItem="YpO-vD-NQj" secondAttribute="leadingMargin" id="J2S-Ll-DoG"/>
+                            <constraint firstItem="Dd3-y0-3Y7" firstAttribute="trailing" secondItem="YpO-vD-NQj" secondAttribute="trailingMargin" id="MEJ-xd-PCR"/>
+                            <constraint firstItem="APg-td-bVF" firstAttribute="top" secondItem="Dd3-y0-3Y7" secondAttribute="bottom" constant="8" id="OOd-Me-mgd"/>
+                            <constraint firstItem="Dd3-y0-3Y7" firstAttribute="top" secondItem="psd-4E-TE2" secondAttribute="bottom" constant="13" id="R3f-Ag-bJb"/>
+                            <constraint firstItem="l8W-hz-fw6" firstAttribute="top" secondItem="alj-0i-jhf" secondAttribute="bottom" constant="20" id="Wma-Nj-QcW"/>
+                            <constraint firstItem="APg-td-bVF" firstAttribute="centerY" secondItem="YpO-vD-NQj" secondAttribute="centerY" id="f1g-2d-SW4"/>
+                            <constraint firstItem="APg-td-bVF" firstAttribute="leading" secondItem="YpO-vD-NQj" secondAttribute="leadingMargin" id="oeV-Md-lbk"/>
+                            <constraint firstItem="alj-0i-jhf" firstAttribute="centerX" secondItem="YpO-vD-NQj" secondAttribute="centerX" id="sln-SV-g18"/>
+                            <constraint firstItem="APg-td-bVF" firstAttribute="centerX" secondItem="YpO-vD-NQj" secondAttribute="centerX" id="xkQ-k1-Gai"/>
+                            <constraint firstItem="APg-td-bVF" firstAttribute="trailing" secondItem="YpO-vD-NQj" secondAttribute="trailingMargin" id="yce-xV-XNl"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="owC-6M-0CV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2266.5" y="221.5"/>
         </scene>
         <!--Settings-->
         <scene sceneID="JTs-Zu-yac">
@@ -366,5 +424,6 @@
     <resources>
         <image name="Progress Icon" width="591" height="619"/>
         <image name="Settings Button" width="50" height="50"/>
+        <image name="Success Icon" width="591" height="619"/>
     </resources>
 </document>
