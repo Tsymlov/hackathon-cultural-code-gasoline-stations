@@ -170,7 +170,7 @@
         <!--Progress-->
         <scene sceneID="EtX-Pu-mHi">
             <objects>
-                <viewController id="dLS-Uw-14O" userLabel="Progress" sceneMemberID="viewController">
+                <viewController id="dLS-Uw-14O" userLabel="Progress" customClass="ProgressViewController" customModule="gas_stations" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="P95-KE-6GE"/>
                         <viewControllerLayoutGuide type="bottom" id="XGj-WW-Aom"/>
