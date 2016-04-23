@@ -88,7 +88,7 @@
         <!--Summary-->
         <scene sceneID="I5q-ew-YHx">
             <objects>
-                <viewController id="4gg-2h-reL" userLabel="Summary" sceneMemberID="viewController">
+                <viewController id="4gg-2h-reL" userLabel="Summary" customClass="SummaryViewController" customModule="gas_stations" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oat-qd-2WU"/>
                         <viewControllerLayoutGuide type="bottom" id="KLB-qh-6I5"/>
@@ -109,11 +109,19 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gbf-Hq-Zaq">
+                            <pickerView contentMode="scaleToFill" restorationIdentifier="Roubles" translatesAutoresizingMaskIntoConstraints="NO" id="Gbf-Hq-Zaq">
                                 <rect key="frame" x="-4" y="70" width="383" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4gg-2h-reL" id="Nar-Cx-n27"/>
+                                    <outlet property="delegate" destination="4gg-2h-reL" id="Ruz-Eu-YlQ"/>
+                                </connections>
                             </pickerView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k7c-ov-4LT">
+                            <pickerView contentMode="scaleToFill" restorationIdentifier="Litres" translatesAutoresizingMaskIntoConstraints="NO" id="k7c-ov-4LT">
                                 <rect key="frame" x="-4" y="340" width="383" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4gg-2h-reL" id="Msy-WL-MLF"/>
+                                    <outlet property="delegate" destination="4gg-2h-reL" id="Txm-Aj-hfw"/>
+                                </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfE-bu-aRu">
                                 <rect key="frame" x="136" y="594" width="103" height="53"/>
