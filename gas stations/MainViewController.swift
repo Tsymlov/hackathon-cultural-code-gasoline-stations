@@ -40,6 +40,11 @@ class MainViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
         setupNavigine()
+        mapView.userTrackingMode = .FollowWithHeading
+        self.pumpNumberLabel.hidden = true
+        self.nextButton.hidden = true
+        self.whiteMask.hidden = true
+        currentPumpNumber = ""
     }
     
     private func setupNavigine(){
@@ -68,7 +73,7 @@ extension MainViewController: NavigineCoreDelegate{
             mapView.userTrackingMode = .None
             mapView.setCenterCoordinate(mapView.centerCoordinate, zoomLevel: 17, animated: true)
             currentPumpNumber = number
-            UIView.animateWithDuration(1){
+            UIView.animateWithDuration(3){
                 self.pumpNumberLabel.text = "Колонка №\(number)"
                 self.pumpNumberLabel.hidden = false
                 self.nextButton.hidden = false
