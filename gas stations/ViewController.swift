@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     private let userHash = "6FBE-A327-8081-B5A0"
     private let locationName = "Хлеб и Вино"
     
+    @IBOutlet weak var label: UILabel!
+    
     private var navigineCore: NavigineCore!{
         didSet{
             navigineCore?.delegate = self
@@ -38,7 +40,10 @@ class ViewController: UIViewController {
 
 extension ViewController: NavigineCoreDelegate{
     func didRangePushWithTitle(title: String!, content: String!, image: String!, id: Int) {
-        print(title)
+        guard let number = content else{
+            return
+        }
+        label.text = number
     }
 }
 
