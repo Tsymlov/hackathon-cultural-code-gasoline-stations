@@ -196,6 +196,9 @@
                                 <state key="normal" title="Отменить заправку">
                                     <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchCancelButton" destination="dLS-Uw-14O" eventType="touchUpInside" id="0x2-1w-v6j"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -19,4 +19,7 @@ class ProgressViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
+    @IBAction func touchCancelButton() {
+        navigationController?.popViewControllerAnimated(true)
+    }
 }
