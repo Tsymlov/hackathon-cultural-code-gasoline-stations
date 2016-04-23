@@ -28,6 +28,8 @@ class MainViewController: UIViewController {
         }
     }
     
+    // MARK: - VC life Cycle
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         setupNavigine()
@@ -42,6 +44,11 @@ class MainViewController: UIViewController {
             guard error != nil else { return }
             print(error?.localizedDescription)
         }
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func touchSettings() {
     }
 }
 
