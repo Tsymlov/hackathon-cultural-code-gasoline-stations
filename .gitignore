@@ -2,7 +2,7 @@ Pods
 Podfile.lock
 Carthage/Checkouts
 Carthage/Build
-rosizo.xcodeproj/project.xcworkspace
-rosizo.xcodeproj/xcuserdata
-rosizo.xcworkspace/xcuserdata
+*.xcodeproj/project.xcworkspace
+*.xcodeproj/xcuserdata
+*.xcworkspace/xcuserdata
 .idea
