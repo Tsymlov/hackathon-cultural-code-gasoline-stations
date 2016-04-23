@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Djc-hw-xv3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -129,6 +130,9 @@
                                 <state key="normal" title="Далее">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="dLS-Uw-14O" kind="show" id="VeW-B6-3zd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -162,6 +166,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DJi-vA-qan" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1249.5" y="221.5"/>
+        </scene>
+        <!--Progress-->
+        <scene sceneID="EtX-Pu-mHi">
+            <objects>
+                <viewController id="dLS-Uw-14O" userLabel="Progress" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P95-KE-6GE"/>
+                        <viewControllerLayoutGuide type="bottom" id="XGj-WW-Aom"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vm7-UX-A3n">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Progress Icon" translatesAutoresizingMaskIntoConstraints="NO" id="nfk-TX-fhD">
+                                <rect key="frame" x="16" y="162" width="343" height="343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nfk-TX-fhD" secondAttribute="height" multiplier="1:1" id="vKK-J1-YQM"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подождите,  мы Вас заправляем" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xg9-7t-7pl">
+                                <rect key="frame" x="16" y="33" width="343" height="121"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h38-LE-jlG">
+                                <rect key="frame" x="117" y="617" width="141" height="30"/>
+                                <state key="normal" title="Отменить заправку">
+                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xg9-7t-7pl" firstAttribute="leading" secondItem="vm7-UX-A3n" secondAttribute="leadingMargin" id="76P-k1-J9b"/>
+                            <constraint firstItem="nfk-TX-fhD" firstAttribute="trailing" secondItem="vm7-UX-A3n" secondAttribute="trailingMargin" id="8gY-pt-p6B"/>
+                            <constraint firstItem="XGj-WW-Aom" firstAttribute="top" secondItem="h38-LE-jlG" secondAttribute="bottom" constant="20" id="Ocv-3y-ylo"/>
+                            <constraint firstItem="Xg9-7t-7pl" firstAttribute="top" secondItem="P95-KE-6GE" secondAttribute="bottom" constant="13" id="X0a-5I-fC9"/>
+                            <constraint firstItem="Xg9-7t-7pl" firstAttribute="trailing" secondItem="vm7-UX-A3n" secondAttribute="trailingMargin" id="XQd-rF-ag3"/>
+                            <constraint firstItem="h38-LE-jlG" firstAttribute="centerX" secondItem="vm7-UX-A3n" secondAttribute="centerX" id="egz-oV-uY2"/>
+                            <constraint firstItem="nfk-TX-fhD" firstAttribute="top" secondItem="Xg9-7t-7pl" secondAttribute="bottom" constant="8" id="f4e-lx-pvb"/>
+                            <constraint firstItem="nfk-TX-fhD" firstAttribute="centerY" secondItem="vm7-UX-A3n" secondAttribute="centerY" id="hX9-6P-6SR"/>
+                            <constraint firstItem="nfk-TX-fhD" firstAttribute="leading" secondItem="vm7-UX-A3n" secondAttribute="leadingMargin" id="vvB-ZT-Djl"/>
+                            <constraint firstItem="nfk-TX-fhD" firstAttribute="centerX" secondItem="vm7-UX-A3n" secondAttribute="centerX" id="zdN-c0-wzl"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uqn-zK-1HE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1766.5" y="221.5"/>
         </scene>
         <!--Settings-->
         <scene sceneID="JTs-Zu-yac">
@@ -306,6 +361,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Progress Icon" width="591" height="619"/>
         <image name="Settings Button" width="50" height="50"/>
     </resources>
 </document>
