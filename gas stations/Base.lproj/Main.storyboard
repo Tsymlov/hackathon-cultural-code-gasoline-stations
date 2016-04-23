@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="gas_stations" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Main" customClass="MainViewController" customModule="gas_stations" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -47,6 +47,9 @@
                                 <state key="normal" title="Далее">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="4gg-2h-reL" kind="show" id="wia-pL-LgP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -82,10 +85,29 @@
             </objects>
             <point key="canvasLocation" x="755.5" y="221.5"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Choose Gasoline Type-->
+        <scene sceneID="I5q-ew-YHx">
+            <objects>
+                <viewController id="4gg-2h-reL" userLabel="Choose Gasoline Type" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oat-qd-2WU"/>
+                        <viewControllerLayoutGuide type="bottom" id="KLB-qh-6I5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PuI-Mf-g59">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DJi-vA-qan" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1249.5" y="221.5"/>
+        </scene>
+        <!--Settings-->
         <scene sceneID="JTs-Zu-yac">
             <objects>
-                <tableViewController id="Ylv-6V-x10" sceneMemberID="viewController">
+                <tableViewController id="Ylv-6V-x10" userLabel="Settings" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="66" sectionHeaderHeight="18" sectionFooterHeight="18" id="eSF-IJ-JaQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,10 +202,10 @@
             </objects>
             <point key="canvasLocation" x="755.5" y="1040.5"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Main NavController-->
         <scene sceneID="FBw-Wd-f5Y">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Djc-hw-xv3" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Djc-hw-xv3" userLabel="Main NavController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="01c-yj-EQm">
