@@ -20,7 +20,11 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="l9w-f7-lHg">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOc-GF-1gO">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z9U-Of-QMT" userLabel="White Mask">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOc-GF-1gO" userLabel="Settings">
                                 <rect key="frame" x="16" y="28" width="36" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="0Lw-q3-ErZ"/>
@@ -32,15 +36,37 @@
                                     <segue destination="Ylv-6V-x10" kind="show" id="4Ja-vL-fjf"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Колонка № 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcZ-rY-zUq">
+                                <rect key="frame" x="12" y="446" width="351" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHD-IH-0QR">
+                                <rect key="frame" x="135.5" y="590" width="103" height="53"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="34"/>
+                                <state key="normal" title="Далее">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="pHD-IH-0QR" firstAttribute="top" secondItem="l9w-f7-lHg" secondAttribute="bottom" constant="-77" id="DcY-G5-B2B"/>
                             <constraint firstItem="l9w-f7-lHg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Dxu-5x-eEZ"/>
+                            <constraint firstItem="z9U-Of-QMT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="HOw-mf-FbJ"/>
+                            <constraint firstItem="pHD-IH-0QR" firstAttribute="centerX" secondItem="l9w-f7-lHg" secondAttribute="centerX" id="Mxj-Dc-1sE"/>
                             <constraint firstItem="l9w-f7-lHg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QyF-Hy-Ez2"/>
                             <constraint firstItem="QOc-GF-1gO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="RjG-wW-q5r"/>
                             <constraint firstItem="QOc-GF-1gO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="XSE-Cp-lck"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="z9U-Of-QMT" secondAttribute="bottom" id="aXe-N4-3Qn"/>
+                            <constraint firstItem="WcZ-rY-zUq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="4" id="bGv-HX-r7Q"/>
                             <constraint firstAttribute="trailing" secondItem="l9w-f7-lHg" secondAttribute="trailing" id="bHO-EU-E5s"/>
+                            <constraint firstItem="WcZ-rY-zUq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="gJH-Jd-iZi"/>
+                            <constraint firstItem="pHD-IH-0QR" firstAttribute="top" secondItem="WcZ-rY-zUq" secondAttribute="bottom" constant="108" id="o9b-DX-Yoi"/>
+                            <constraint firstItem="z9U-Of-QMT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="saB-Io-i8R"/>
                             <constraint firstItem="l9w-f7-lHg" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="tfG-a4-Uqc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z9U-Of-QMT" secondAttribute="trailing" constant="-20" id="wd4-Gd-4Gc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2sE-21-7NG"/>
@@ -48,6 +74,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="mapView" destination="l9w-f7-lHg" id="RYP-D2-71M"/>
+                        <outlet property="nextButton" destination="pHD-IH-0QR" id="NH0-U0-CYO"/>
+                        <outlet property="pumpNumberLabel" destination="WcZ-rY-zUq" id="RE6-0M-byG"/>
+                        <outlet property="whiteMask" destination="z9U-Of-QMT" id="rBC-z8-f6G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

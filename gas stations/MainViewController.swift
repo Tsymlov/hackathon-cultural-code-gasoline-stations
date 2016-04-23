@@ -15,13 +15,18 @@ class MainViewController: UIViewController {
     private let locationName = "Хлеб и Вино"
     private var currentPumpNumber = ""
     
-    @IBOutlet weak var mapView: MKMapView!{
+    @IBOutlet private weak var mapView: MKMapView!{
         didSet{
             mapView.showsUserLocation = true
             mapView.userTrackingMode = .FollowWithHeading
-            mapView.mapType = .Hybrid
+            mapView.mapType = .HybridFlyover
+            mapView.showsBuildings = true
         }
     }
+    
+    @IBOutlet weak var whiteMask: UIView!
+    @IBOutlet weak var pumpNumberLabel: UILabel!
+    @IBOutlet weak var nextButton: UIButton!
     
     private var navigineCore: NavigineCore!{
         didSet{
@@ -65,7 +70,15 @@ extension MainViewController: NavigineCoreDelegate{
             return
         }
         if number != currentPumpNumber{
+            mapView.userTrackingMode = .None
+            mapView.setCenterCoordinate(mapView.centerCoordinate, zoomLevel: 17, animated: true)
             currentPumpNumber = number
+            UIView.animateWithDuration(1){
+                self.pumpNumberLabel.text = "Колонка №\(number)"
+                self.pumpNumberLabel.hidden = false
+                self.nextButton.hidden = false
+                self.whiteMask.hidden = false
+            }
         }
     }
 }
