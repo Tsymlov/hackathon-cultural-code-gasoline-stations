@@ -116,7 +116,7 @@
                                     <outlet property="delegate" destination="4gg-2h-reL" id="Ruz-Eu-YlQ"/>
                                 </connections>
                             </pickerView>
-                            <pickerView contentMode="scaleToFill" restorationIdentifier="Litres" translatesAutoresizingMaskIntoConstraints="NO" id="k7c-ov-4LT">
+                            <pickerView contentMode="scaleToFill" restorationIdentifier="Litres" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7c-ov-4LT">
                                 <rect key="frame" x="-4" y="340" width="383" height="216"/>
                                 <connections>
                                     <outlet property="dataSource" destination="4gg-2h-reL" id="Msy-WL-MLF"/>
@@ -154,6 +154,10 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="litresPickerView" destination="k7c-ov-4LT" id="elM-Qi-YrF"/>
+                        <outlet property="roublesPickerView" destination="Gbf-Hq-Zaq" id="2j5-bc-jtU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DJi-vA-qan" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

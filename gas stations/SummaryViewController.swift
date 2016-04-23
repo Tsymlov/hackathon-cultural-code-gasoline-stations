@@ -9,7 +9,12 @@
 import UIKit
 
 class SummaryViewController: UIViewController {
-
+    @IBOutlet weak var roublesPickerView: UIPickerView!{
+        didSet{
+            roublesPickerView.selectRow(30-1, inComponent: 0, animated: true)
+        }
+    }
+    @IBOutlet weak var litresPickerView: UIPickerView!
 }
 
 extension SummaryViewController: UIPickerViewDataSource {
@@ -40,6 +45,16 @@ extension SummaryViewController: UIPickerViewDelegate{
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print(row)
+        switch pickerView.restorationIdentifier ?? "" {
+        case PickerIDs.Litres.rawValue:
+            roublesPickerView.selectRow((row+1)*30-1, inComponent: 0, animated: true)
+        case PickerIDs.Roubles.rawValue:
+            let litres = (row+1) / 30
+            let roubles = litres * 30
+            litresPickerView.selectRow(litres-1, inComponent: 0, animated: true)
+            roublesPickerView.selectRow(roubles-1, inComponent: 0, animated: true)
+        default:
+            break
+        }
     }
 }
