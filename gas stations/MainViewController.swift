@@ -20,7 +20,6 @@ class MainViewController: UIViewController {
             mapView.showsUserLocation = true
             mapView.userTrackingMode = .FollowWithHeading
             mapView.mapType = .Hybrid
-            
         }
     }
     
@@ -34,6 +33,7 @@ class MainViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
         setupNavigine()
     }
     
@@ -46,6 +46,11 @@ class MainViewController: UIViewController {
             guard error != nil else { return }
             print(error?.localizedDescription)
         }
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigineCore.stopNavigine()
     }
     
     // MARK: - Actions
