@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Djc-hw-xv3">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -30,6 +29,7 @@
                                 <state key="normal" image="Settings Button"/>
                                 <connections>
                                     <action selector="touchSettings" destination="BYZ-38-t0r" eventType="touchUpInside" id="hcn-qS-25Q"/>
+                                    <segue destination="Ylv-6V-x10" kind="show" id="4Ja-vL-fjf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -66,7 +66,7 @@
                             <tableViewSection id="RWq-cA-9x0">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="iu4-fH-dR9">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iu4-fH-dR9" id="Ul7-BX-suF">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -74,7 +74,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="lYg-iY-psG">
-                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="108" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lYg-iY-psG" id="9US-hN-eBi">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -82,7 +82,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="m0W-Ac-oRO">
-                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="152" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m0W-Ac-oRO" id="gwQ-nO-UxH">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -97,6 +97,7 @@
                             <outlet property="delegate" destination="Ylv-6V-x10" id="NkL-1f-Bq8"/>
                         </connections>
                     </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FjD-OJ-ilN" userLabel="First Responder" sceneMemberID="firstResponder"/>

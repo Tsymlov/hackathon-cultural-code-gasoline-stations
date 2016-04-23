@@ -50,7 +50,7 @@ class MainViewController: UIViewController {
     
     override func viewWillDisappear(animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: true)
-        navigineCore.stopNavigine()
+//        navigineCore.stopNavigine() // For speed optimization
     }
     
     // MARK: - Actions
