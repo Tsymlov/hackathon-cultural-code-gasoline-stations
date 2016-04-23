@@ -227,7 +227,7 @@
         <!--Success-->
         <scene sceneID="bav-7l-Y9M">
             <objects>
-                <viewController id="1Ap-jX-81D" userLabel="Success" customClass="ProgressViewController" customModule="gas_stations" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1Ap-jX-81D" userLabel="Success" customClass="SuccessViewController" customModule="gas_stations" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="psd-4E-TE2"/>
                         <viewControllerLayoutGuide type="bottom" id="l8W-hz-fw6"/>
@@ -255,7 +255,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCancelButton" destination="1Ap-jX-81D" eventType="touchUpInside" id="J3I-oL-X4R"/>
+                                    <action selector="touchCloseButton" destination="1Ap-jX-81D" eventType="touchUpInside" id="skv-Rr-e6q"/>
                                 </connections>
                             </button>
                         </subviews>
