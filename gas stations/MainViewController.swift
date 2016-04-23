@@ -57,11 +57,6 @@ class MainViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
 //        navigineCore.stopNavigine() // For speed optimization
     }
-    
-    // MARK: - Actions
-    
-    @IBAction func touchSettings() {
-    }
 }
 
 extension MainViewController: NavigineCoreDelegate{
