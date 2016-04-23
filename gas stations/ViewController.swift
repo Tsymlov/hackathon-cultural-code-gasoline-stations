@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    private let userHash = "6FBE-A327-8081-B5A0"
+    private let locationName = "Хлеб и Вино"
+    
     private var navigineCore: NavigineCore!{
         didSet{
             navigineCore?.delegate = self
@@ -18,7 +21,18 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        setupNavigine()
+    }
+    
+    private func setupNavigine(){
         navigineCore = NavigineCore.defaultCore()
+        navigineCore.downloadContent(userHash, location: locationName, forceReload: false, processBlock: { (_) in}, successBlock: {
+                self.navigineCore.startRangePushes()
+                self.navigineCore.startNavigine()
+        }) { (error) in
+            guard error != nil else { return }
+            print(error?.localizedDescription)
+        }
     }
 }
 
