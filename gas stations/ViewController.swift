@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import MapKit
 
 class ViewController: UIViewController {
     
     private let userHash = "6FBE-A327-8081-B5A0"
     private let locationName = "Хлеб и Вино"
+    private var currentPumpNumber = ""
     
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var mapView: MKMapView!
     
     private var navigineCore: NavigineCore!{
         didSet{
@@ -43,7 +45,9 @@ extension ViewController: NavigineCoreDelegate{
         guard let number = content else{
             return
         }
-        label.text = number
+        if number != currentPumpNumber{
+            currentPumpNumber = number
+        }
     }
 }
 
