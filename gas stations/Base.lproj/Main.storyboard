@@ -163,8 +163,32 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="ao7-3G-w99" detailTextLabel="44Y-Cl-Aec" style="IBUITableViewCellStyleValue1" id="m0W-Ac-oRO">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="B6a-oQ-gw5" detailTextLabel="9J7-33-1nv" style="IBUITableViewCellStyleValue1" id="ZDR-1v-VIz">
                                         <rect key="frame" x="0.0" y="231" width="375" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZDR-1v-VIz" id="NvU-3X-a8l">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Тип топлива" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B6a-oQ-gw5">
+                                                    <rect key="frame" x="15" y="23" width="93.5" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="АИ-95" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9J7-33-1nv">
+                                                    <rect key="frame" x="310.5" y="23" width="49.5" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="ao7-3G-w99" detailTextLabel="44Y-Cl-Aec" style="IBUITableViewCellStyleValue1" id="m0W-Ac-oRO">
+                                        <rect key="frame" x="0.0" y="297" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m0W-Ac-oRO" id="gwQ-nO-UxH">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
@@ -220,23 +244,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XFJ-rs-PY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="279" y="222"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="lf4-L3-biL">
-            <objects>
-                <viewController id="7cW-K3-MBg" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="98V-xc-fdn"/>
-                        <viewControllerLayoutGuide type="bottom" id="28S-8y-tJf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="LMM-8p-6h4">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Fh-p3-ZJR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>
