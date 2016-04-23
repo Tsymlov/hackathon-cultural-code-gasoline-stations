@@ -19,6 +19,8 @@ class MainViewController: UIViewController {
         didSet{
             mapView.showsUserLocation = true
             mapView.userTrackingMode = .FollowWithHeading
+            mapView.mapType = .Hybrid
+            
         }
     }
     
