@@ -109,17 +109,23 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sTC-vq-uAp">
-                                <rect key="frame" x="16" y="72" width="343" height="29"/>
+                                <rect key="frame" x="16" y="84" width="343" height="29"/>
                                 <segments>
                                     <segment title="Рубли"/>
                                     <segment title="Литры"/>
                                     <segment title="Полный бак"/>
                                 </segments>
+                                <connections>
+                                    <action selector="changeValueOfSegmentedControl" destination="4gg-2h-reL" eventType="valueChanged" id="m3l-y8-rTJ"/>
+                                </connections>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lm3-Zf-siq">
-                                <rect key="frame" x="16" y="108" width="343" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="250" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lm3-Zf-siq">
+                                <rect key="frame" x="16" y="132" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                <connections>
+                                    <action selector="changeEditing" destination="4gg-2h-reL" eventType="editingChanged" id="ABx-QG-EQW"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -129,13 +135,18 @@
                             <constraint firstItem="lm3-Zf-siq" firstAttribute="trailing" secondItem="PuI-Mf-g59" secondAttribute="trailingMargin" id="Fag-lA-s78"/>
                             <constraint firstItem="KLB-qh-6I5" firstAttribute="top" secondItem="QfE-bu-aRu" secondAttribute="bottom" constant="236" id="Gsj-xG-cbn"/>
                             <constraint firstItem="QfE-bu-aRu" firstAttribute="centerX" secondItem="PuI-Mf-g59" secondAttribute="centerX" id="UgE-t4-ccB"/>
-                            <constraint firstItem="lm3-Zf-siq" firstAttribute="top" secondItem="sTC-vq-uAp" secondAttribute="bottom" constant="8" id="XI9-ku-1lz"/>
+                            <constraint firstItem="lm3-Zf-siq" firstAttribute="top" secondItem="sTC-vq-uAp" secondAttribute="bottom" constant="20" id="XI9-ku-1lz"/>
                             <constraint firstItem="sTC-vq-uAp" firstAttribute="trailing" secondItem="PuI-Mf-g59" secondAttribute="trailingMargin" id="hhA-CD-pne"/>
-                            <constraint firstItem="sTC-vq-uAp" firstAttribute="top" secondItem="oat-qd-2WU" secondAttribute="bottom" constant="8" id="tqs-O3-26B"/>
+                            <constraint firstItem="sTC-vq-uAp" firstAttribute="top" secondItem="oat-qd-2WU" secondAttribute="bottom" constant="20" id="tqs-O3-26B"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="nextButton" destination="QfE-bu-aRu" id="aF6-CH-hxP"/>
+                        <outlet property="segmentedControl" destination="sTC-vq-uAp" id="vkT-Od-kje"/>
+                        <outlet property="valueTextField" destination="lm3-Zf-siq" id="jH9-h4-U7Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DJi-vA-qan" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
