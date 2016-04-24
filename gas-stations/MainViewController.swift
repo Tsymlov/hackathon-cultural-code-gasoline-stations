@@ -13,7 +13,6 @@ class MainViewController: UIViewController {
     
     private let userHash = "6FBE-A327-8081-B5A0"
     private let locationName = "Хлеб и Вино"
-    private var currentPumpNumber = ""
     
     @IBOutlet private weak var mapView: MKMapView!{
         didSet{
@@ -24,9 +23,9 @@ class MainViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var whiteMask: UIView!
-    @IBOutlet weak var pumpNumberLabel: UILabel!
-    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet private weak var whiteMask: UIView!
+    @IBOutlet private weak var pumpNumberLabel: UILabel!
+    @IBOutlet private weak var nextButton: UIButton!
     
     private var navigineCore: NavigineCore!{
         didSet{
@@ -34,17 +33,15 @@ class MainViewController: UIViewController {
         }
     }
     
+    private var currentPumpNumber = ""
+    
     // MARK: - VC life Cycle
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
         setupNavigine()
-        mapView.userTrackingMode = .FollowWithHeading
-        self.pumpNumberLabel.hidden = true
-        self.nextButton.hidden = true
-        self.whiteMask.hidden = true
-        currentPumpNumber = ""
+        setupControls()
     }
     
     private func setupNavigine(){
@@ -56,6 +53,14 @@ class MainViewController: UIViewController {
             guard error != nil else { return }
             print(error?.localizedDescription)
         }
+    }
+    
+    private func setupControls(){
+        mapView.userTrackingMode = .FollowWithHeading
+        pumpNumberLabel.hidden = true
+        nextButton.hidden = true
+        whiteMask.hidden = true
+        currentPumpNumber = ""
     }
     
     override func viewWillDisappear(animated: Bool) {
