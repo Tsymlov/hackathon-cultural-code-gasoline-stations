@@ -34,6 +34,8 @@
 	<string>UIStatusBarStyleLightContent</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string></string>
+	<key>CFBundleDisplayName</key>
+	<string>Заправки</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
