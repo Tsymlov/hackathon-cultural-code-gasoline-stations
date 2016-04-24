@@ -72,6 +72,8 @@ class MainViewController: UIViewController {
     }
 }
 
+// MARK: - NavigineCoreDelegate
+
 extension MainViewController: NavigineCoreDelegate{
     func didRangePushWithTitle(title: String!, content: String!, image: String!, id: Int) {
         guard let number = content else { return }
