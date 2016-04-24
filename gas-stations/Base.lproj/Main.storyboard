@@ -105,6 +105,7 @@
                                     <segment title="Литры"/>
                                     <segment title="Полный бак"/>
                                 </segments>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="changeValueOfSegmentedControl" destination="4gg-2h-reL" eventType="valueChanged" id="m3l-y8-rTJ"/>
                                 </connections>
@@ -413,6 +414,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="01c-yj-EQm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
