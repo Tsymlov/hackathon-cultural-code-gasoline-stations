@@ -84,7 +84,7 @@
 		3D7B82FE1CCBA5E80014BAE0 = {
 			isa = PBXGroup;
 			children = (
-				3D7B83091CCBA5E80014BAE0 /* gas stations */,
+				3D7B83091CCBA5E80014BAE0 /* gas-stations */,
 				3D7B83081CCBA5E80014BAE0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,7 +97,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3D7B83091CCBA5E80014BAE0 /* gas stations */ = {
+		3D7B83091CCBA5E80014BAE0 /* gas-stations */ = {
 			isa = PBXGroup;
 			children = (
 				3D7B837B1CCBE5A20014BAE0 /* Helpers */,
@@ -113,7 +113,7 @@
 				3D7B83161CCBA5E80014BAE0 /* Info.plist */,
 				3D7B83331CCBAA780014BAE0 /* gas stations-Bridging-Header.h */,
 			);
-			path = "gas stations";
+			path = "gas-stations";
 			sourceTree = "<group>";
 		};
 		3D7B831C1CCBA80F0014BAE0 /* Frameworks */ = {
@@ -192,7 +192,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3D7B83021CCBA5E80014BAE0 /* Build configuration list for PBXProject "gas stations" */;
+			buildConfigurationList = 3D7B83021CCBA5E80014BAE0 /* Build configuration list for PBXProject "gas-stations" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -349,18 +349,17 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "gas stations/Info.plist";
+				INFOPLIST_FILE = "gas-stations/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/gas",
-					stations/Frameworks/Navigine,
+					"$(PROJECT_DIR)/gas-stations/Frameworks/Navigine",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ips.gas-stations";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "gas stations/gas stations-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "gas-stations/gas stations-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -372,25 +371,24 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "gas stations/Info.plist";
+				INFOPLIST_FILE = "gas-stations/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/gas",
-					stations/Frameworks/Navigine,
+					"$(PROJECT_DIR)/gas-stations/Frameworks/Navigine",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ips.gas-stations";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "gas stations/gas stations-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "gas-stations/gas stations-Bridging-Header.h";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3D7B83021CCBA5E80014BAE0 /* Build configuration list for PBXProject "gas stations" */ = {
+		3D7B83021CCBA5E80014BAE0 /* Build configuration list for PBXProject "gas-stations" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D7B83171CCBA5E80014BAE0 /* Debug */,
