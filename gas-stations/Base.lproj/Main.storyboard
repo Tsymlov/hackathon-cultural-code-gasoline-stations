@@ -37,14 +37,14 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Колонка № 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcZ-rY-zUq">
-                                <rect key="frame" x="12" y="446" width="351" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <rect key="frame" x="12" y="120" width="351" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHD-IH-0QR">
-                                <rect key="frame" x="135.5" y="590" width="103" height="53"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="34"/>
+                                <rect key="frame" x="137" y="590" width="100" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <state key="normal" title="Далее">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -62,11 +62,11 @@
                             <constraint firstItem="l9w-f7-lHg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QyF-Hy-Ez2"/>
                             <constraint firstItem="QOc-GF-1gO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="RjG-wW-q5r"/>
                             <constraint firstItem="QOc-GF-1gO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="XSE-Cp-lck"/>
+                            <constraint firstItem="WcZ-rY-zUq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="Z9r-sX-yw4"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="z9U-Of-QMT" secondAttribute="bottom" id="aXe-N4-3Qn"/>
                             <constraint firstItem="WcZ-rY-zUq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="4" id="bGv-HX-r7Q"/>
                             <constraint firstAttribute="trailing" secondItem="l9w-f7-lHg" secondAttribute="trailing" id="bHO-EU-E5s"/>
                             <constraint firstItem="WcZ-rY-zUq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="gJH-Jd-iZi"/>
-                            <constraint firstItem="pHD-IH-0QR" firstAttribute="top" secondItem="WcZ-rY-zUq" secondAttribute="bottom" constant="108" id="o9b-DX-Yoi"/>
                             <constraint firstItem="z9U-Of-QMT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="saB-Io-i8R"/>
                             <constraint firstItem="l9w-f7-lHg" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="tfG-a4-Uqc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="z9U-Of-QMT" secondAttribute="trailing" constant="-20" id="wd4-Gd-4Gc"/>
@@ -98,16 +98,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfE-bu-aRu">
-                                <rect key="frame" x="136" y="378" width="103" height="53"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="34"/>
-                                <state key="normal" title="Далее">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="dLS-Uw-14O" kind="show" id="VeW-B6-3zd"/>
-                                </connections>
-                            </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sTC-vq-uAp">
                                 <rect key="frame" x="16" y="84" width="343" height="29"/>
                                 <segments>
@@ -127,6 +117,16 @@
                                     <action selector="changeEditing" destination="4gg-2h-reL" eventType="editingChanged" id="ABx-QG-EQW"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfE-bu-aRu">
+                                <rect key="frame" x="137.5" y="378" width="100" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Далее">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dLS-Uw-14O" kind="show" id="VeW-B6-3zd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
