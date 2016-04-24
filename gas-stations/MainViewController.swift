@@ -19,7 +19,7 @@ class MainViewController: UIViewController {
         didSet{
             mapView.showsUserLocation = true
             mapView.userTrackingMode = .FollowWithHeading
-            mapView.mapType = .HybridFlyover
+            mapView.mapType = .Standard
             mapView.showsBuildings = true
         }
     }
