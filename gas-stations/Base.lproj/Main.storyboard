@@ -52,7 +52,7 @@
                                     <segue destination="4gg-2h-reL" kind="show" id="wia-pL-LgP"/>
                                 </connections>
                             </button>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gazpom Icon" translatesAutoresizingMaskIntoConstraints="NO" id="fBI-6b-PwL">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lukoil" translatesAutoresizingMaskIntoConstraints="NO" id="fBI-6b-PwL">
                                 <rect key="frame" x="167.5" y="313.5" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Bou-BI-MM9"/>
@@ -459,7 +459,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Gazpom Icon" width="602" height="630"/>
+        <image name="Lukoil" width="596" height="624"/>
         <image name="Progress Icon" width="591" height="619"/>
         <image name="Settings Button" width="50" height="50"/>
         <image name="Success Icon" width="591" height="619"/>
