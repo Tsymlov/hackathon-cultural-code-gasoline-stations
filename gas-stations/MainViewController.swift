@@ -13,6 +13,7 @@ class MainViewController: UIViewController {
     
     private let userHash = "6FBE-A327-8081-B5A0"
     private let locationName = "Хлеб и Вино"
+    private let beaconLocations = [CLLocationCoordinate2D(latitude: 55.742317, longitude: 37.609531), CLLocationCoordinate2D(latitude: 55.742264, longitude: 37.609467)]
     
     @IBOutlet private weak var mapView: MKMapView!{
         didSet{
@@ -26,6 +27,7 @@ class MainViewController: UIViewController {
     @IBOutlet private weak var whiteMask: UIView!
     @IBOutlet private weak var pumpNumberLabel: UILabel!
     @IBOutlet private weak var nextButton: UIButton!
+    @IBOutlet weak var pipyakaImageView: UIImageView!
     
     private var navigineCore: NavigineCore!{
         didSet{
@@ -60,6 +62,7 @@ class MainViewController: UIViewController {
         pumpNumberLabel.hidden = true
         nextButton.hidden = true
         whiteMask.hidden = true
+        pipyakaImageView.hidden = true
         currentPumpNumber = ""
     }
     
@@ -71,19 +74,19 @@ class MainViewController: UIViewController {
 
 extension MainViewController: NavigineCoreDelegate{
     func didRangePushWithTitle(title: String!, content: String!, image: String!, id: Int) {
-        guard let number = content else{
-            return
-        }
-        if number != currentPumpNumber{
-            mapView.userTrackingMode = .None
-            mapView.setCenterCoordinate(mapView.centerCoordinate, zoomLevel: 17, animated: true)
-            currentPumpNumber = number
-            UIView.animateWithDuration(3){
-                self.pumpNumberLabel.text = "Колонка №\(number)"
-                self.pumpNumberLabel.hidden = false
-                self.nextButton.hidden = false
-                self.whiteMask.hidden = false
-            }
+        guard let number = content else { return }
+        if number == currentPumpNumber { return }
+        guard let index = Int(number) else { return }
+        let coordinateOfBeacon = beaconLocations[index-1]
+        mapView.userTrackingMode = .None
+        mapView.setCenterCoordinate(coordinateOfBeacon, zoomLevel: 17, animated: true)
+        currentPumpNumber = number
+        UIView.animateWithDuration(3){
+            self.pumpNumberLabel.text = "Колонка №\(number)"
+            self.pumpNumberLabel.hidden = false
+            self.nextButton.hidden = false
+            self.whiteMask.hidden = false
+            self.pipyakaImageView.hidden = false
         }
     }
 }
