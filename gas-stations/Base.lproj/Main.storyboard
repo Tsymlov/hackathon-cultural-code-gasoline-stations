@@ -123,7 +123,7 @@
                                     <segment title="Литры"/>
                                     <segment title="Полный бак"/>
                                 </segments>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="changeValueOfSegmentedControl" destination="4gg-2h-reL" eventType="valueChanged" id="m3l-y8-rTJ"/>
                                 </connections>
