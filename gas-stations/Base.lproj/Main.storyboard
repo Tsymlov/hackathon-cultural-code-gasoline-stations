@@ -117,7 +117,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sTC-vq-uAp">
-                                <rect key="frame" x="16" y="84" width="343" height="29"/>
+                                <rect key="frame" x="16" y="184" width="343" height="29"/>
                                 <segments>
                                     <segment title="Рубли"/>
                                     <segment title="Литры"/>
@@ -129,7 +129,7 @@
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="250" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lm3-Zf-siq">
-                                <rect key="frame" x="16" y="132" width="343" height="30"/>
+                                <rect key="frame" x="16" y="232" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
                                 <connections>
@@ -146,9 +146,18 @@
                                     <segue destination="dLS-Uw-14O" kind="show" id="VeW-B6-3zd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сколько заправляем?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYv-4o-Ump">
+                                <rect key="frame" x="12" y="100" width="351" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="nYv-4o-Ump" firstAttribute="leading" secondItem="PuI-Mf-g59" secondAttribute="leadingMargin" constant="-4" id="5yl-VG-hvc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nYv-4o-Ump" secondAttribute="trailing" constant="-4" id="7tT-pC-XGu"/>
+                            <constraint firstItem="sTC-vq-uAp" firstAttribute="top" secondItem="nYv-4o-Ump" secondAttribute="bottom" constant="50" id="8Qu-7q-keo"/>
                             <constraint firstItem="lm3-Zf-siq" firstAttribute="leading" secondItem="PuI-Mf-g59" secondAttribute="leadingMargin" id="B0F-dD-7gs"/>
                             <constraint firstItem="sTC-vq-uAp" firstAttribute="leading" secondItem="PuI-Mf-g59" secondAttribute="leadingMargin" id="EG0-5X-UTG"/>
                             <constraint firstItem="lm3-Zf-siq" firstAttribute="trailing" secondItem="PuI-Mf-g59" secondAttribute="trailingMargin" id="Fag-lA-s78"/>
@@ -156,7 +165,7 @@
                             <constraint firstItem="QfE-bu-aRu" firstAttribute="centerX" secondItem="PuI-Mf-g59" secondAttribute="centerX" id="UgE-t4-ccB"/>
                             <constraint firstItem="lm3-Zf-siq" firstAttribute="top" secondItem="sTC-vq-uAp" secondAttribute="bottom" constant="20" id="XI9-ku-1lz"/>
                             <constraint firstItem="sTC-vq-uAp" firstAttribute="trailing" secondItem="PuI-Mf-g59" secondAttribute="trailingMargin" id="hhA-CD-pne"/>
-                            <constraint firstItem="sTC-vq-uAp" firstAttribute="top" secondItem="oat-qd-2WU" secondAttribute="bottom" constant="20" id="tqs-O3-26B"/>
+                            <constraint firstItem="nYv-4o-Ump" firstAttribute="top" secondItem="oat-qd-2WU" secondAttribute="bottom" constant="36" id="nJ4-fn-2xi"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
